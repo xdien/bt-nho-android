@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.xdien.btnho">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.apps.drive.b801311"
+            android:value="id=44638695009" />
+
+        <intent-filter>
+            <action android:name="com.google.android.apps.drive.DRIVE_OPEN" />
+
+            <data android:mimeType="application/vnd.google-apps.drive-sdk.44638695009" />
+            <data android:mimeType="image/png" />
+            <data android:mimeType="image/jpeg" />
+            <data android:mimeType="image/jpg" />
+        </intent-filter>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ThemActivity"
+            android:label="@string/title_activity_them"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.xdien.btnho.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DriveSigin"
+            android:label="@string/title_activity_drive_sigin"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.xdien.btnho.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ThemLHHActivity"
+            android:label="@string/title_activity_them_lhh"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.xdien.btnho.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.xdien.btnho.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
